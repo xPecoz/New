@@ -1,0 +1,51 @@
+mixin main-title (title)
+  button(id=title.toLowerCase()).main-title.d-block.position-relative.border-0.text-white.fw-bold.bg-transparent.text-uppercase.rounded-0
+    | #{title}
+    .button__horizontal.position-absolute
+    .button__vertical.position-absolute
+
+mixin project-img-card (src, title, skills, link)
+  .card.position-relative.rounded-3.overflow-hidden
+    p.title #{title}
+    .image.h-100.overflow-hidden
+      img(src="Images/" + src, autoplay muted, alt="Error")
+    .details.position-absolute.h-100.top-0.start-0.h-100.w-75
+      .center.translate-middle-y.text-center.position-absolute.top-50
+        h1.m-0.p-0.text-uppercase.text-white.fw-bold #{title}
+        p.p-0.text-white I Made This Project By 
+          span.html.fw-bold HTML
+          | , 
+          span.css.fw-bold CSS
+          | , 
+          span.js.fw-bold JS
+          | , 
+          -for (let i =0; i < skills.length; i++)
+            -if (skills[i] == "My" || i == skills.length - 1)
+              span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
+            -else
+              span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
+              | , 
+        a(href=link, target="_blank").view-web.fw-bold View Website
+
+mixin project-video-card (src, title, skills)
+  .card.position-relative.rounded-3.overflow-hidden
+    p.title #{title}
+    .image.h-100.overflow-hidden
+      video(src="videos/" + src, autoplay muted loop, alt="Scool")
+    .details.position-absolute.h-100.top-0.start-0.h-100
+      .center.translate-middle-y.text-center.position-absolute.top-50
+        h1.m-0.p-0.text-uppercase.text-white.fw-bold #{title}
+        p.p-0.text-white I Made This Project By 
+          span.html.fw-bold HTML
+          | , 
+          span.css.fw-bold CSS
+          | , 
+          span.js.fw-bold JS
+          | , 
+          -for (let i =0; i < skills.length; i++)
+            -if (skills[i] == "My" || i == skills.length - 1)
+              span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
+            -else
+              span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
+              | , 
+        button.showVideo.m-0.fw-bold(data-src="videos/" + src) Full Screen

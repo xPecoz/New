@@ -1,0 +1,168 @@
+include ./includes/mixin
+doctype html
+html(lang="en").lh-sm
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Abdulrahman Salam
+    link(rel="stylesheet", href="Css/bootstrap.min.css")
+    link(rel="stylesheet", href="Css/main.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
+    link(rel="shortcut icon", href="Images/logo.webp")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&amp;display=swap")
+    link(rel="stylesheet", href="https://unicons.iconscout.com/release/v4.0.0/css/line.css")
+  body.m-0
+    main
+      include ./includes/header
+      i.uil.uil-apps.show-head.d-none
+      include ./includes/header_mobile
+      section.home#home
+        .container.m-auto.min-vh-100.d-flex.justify-content-between.align-items-center.gap-5
+          .info.text-white
+            h1.fw-bold.lh-base Hi There,
+            h1.fw-bold.lh-base Iam Abdulrahman Salam
+            h1.h1-home.overflow-hidden.text-nowrap.text-start.fw-bold.lh-base Full Stack Developer
+          img(src="Images/home.webp", alt="Error")
+      +main-title("About") 
+      section.about
+        .container.m-auto.d-grid.align-items-center
+          .info
+            h2.fs-1.mb-4.fw-bold.text-center Hi Iam Peco
+            p.text-white.lh-lg.text-center Iam Abdulrahman Salam Iam Called "Peco", Iam Full Stack Developer, I
+              | Learned Front End Developer In 6 Months And I Have 4 Months Of
+              | Experince And Back End Developer In 2 Months But Iam Still Learning
+              | It, If You Want Show My Skills 
+              a(href="#skills") Click This
+              |  And My Project 
+              a(href="#project") Click This
+          .icons.d-flex.justify-content-between.w-50
+            a.text-decoration-none(href="https://web.facebook.com/xPecoz/", target="_blank")
+              i(class="fa-brands fa-facebook" style="color: #1877f2")
+            a.text-decoration-none(href="https://www.instagram.com/abdulrahmanbkd/", target="_blank")
+              i(class="fa-brands fa-instagram" style="color: #e1306c")
+            a.text-decoration-none(href="https://api.whatsapp.com/send?phone=201024289101&text=Hello,%20How%20Are%20You?", target="_blank")
+              i(class="fa-brands fa-whatsapp" style="color: #25d366")
+            a.text-decoration-none(href="https://github.com/xPecoz", target="_blank")
+              i(class="fa-brands fa-github" style="color: #979191")
+          button.d-block.download.position-relative.fw-bold.text-uppercase.border-0.m-auto.bg-transparent.p-2.mb-4
+            span.button_lg.d-block.position-relative.text-white.overflow-hidden
+              span.button_sl.d-block.position-absolute.top-0.w-0
+              span.button_text.d-block.position-relative Download My CV
+      +main-title("Services")
+      section.services
+        .container.m-auto.row.row-gap-4
+          .col-lg-4.col-md-6
+            .box.d-flex.align-items-center.gap-3.p-3.rounded-3.h-100
+              lord-icon(
+                src="https://cdn.lordicon.com/ochimkct.json",
+                trigger="hover",
+                colors="primary:#ffffff,secondary:#ffffff"
+              )
+              h3.m-0.fs-2.text-center.lh-base.fw-bold Front End Developer
+              p.text-white.fs-5.text-center.lh-lg
+                | I Have A Lot Of Experience In Designing Front-End-Developer Using
+                | Html, Css, Javascript, PugJS, Sass, Bootstrap And More
+          .col-lg-4.col-md-6
+            .box.d-flex.align-items-center.gap-3.p-3.rounded-3.h-100
+              lord-icon(
+                src="https://cdn.lordicon.com/qghrdngw.json",
+                trigger="morph",
+                colors="primary:#ffffff,secondary:#ffffff"
+              )
+              h3.m-0.fs-2.text-center.lh-base.fw-bold Back End Developer
+              p.text-white.fs-5.text-center.lh-lg
+                | I Have A Lot Of Experience In Designing Back-End-Developer Using
+                | Html,PHP, MYSQL, PugPHP And More
+          .col-lg-4.col-md-6
+            .box.d-flex.align-items-center.gap-3.p-3.rounded-3.h-100
+              lord-icon(
+                src="https://cdn.lordicon.com/nobciafz.json",
+                trigger="hover",
+                colors="primary:#ffffff,secondary:#ffffff"
+              )
+              h3.m-0.fs-2.text-center.lh-base.fw-bold Full Stack Developer
+              p.text-white.fs-5.text-center.lh-lg
+                | As I Said I Have A Lot Of Experience In Front-End-Developer And
+                | Front-End-Developer So I Can Work Full-Stack-Developer
+      +main-title("Skills")
+      section.skills
+        .container.m-auto
+          .info.d-grid.gap-5
+            .box(number="90").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-html5")
+            .box(number="90").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-css3-alt")
+            .box(number="85").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-square-js")
+            .box(number="10").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-react")
+            .box(number="85").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-php")
+            .box(number="80").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              img(src="Images/mysql.webp", alt="Error")
+            .box(number="10").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-laravel")
+            .box(number="75").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-sass")
+            .box(number="80").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-bootstrap")
+            .box(number="75").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              img(src="Images/pug.webp", alt="Error")
+            .box(number="10").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              i(class="fa-brands fa-git")
+            .box(number="10").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+              img(src="Images/ts.webp", alt="Error")
+          .tools
+            h2.text-center.fs-1.fw-bold Tools
+            .images.d-flex.justify-content-between.gap-5
+              img(src="Images/vs-code.webp", alt="Error").m-auto
+              img(src="Images/windows10.webp", alt="Error").m-auto
+              img(src="Images/Xampp.webp", alt="Error").m-auto
+              img(src="Images/git&github.webp", alt="Error").m-auto
+      +main-title("Project")
+      section.project
+        .container.m-auto.position-relative.d-grid.gap-4
+          +project-video-card("School.mp4", "School", ["PHP","My", "SQL"])
+          +project-img-card("Project 3.webp", "Learn Web Developer", [], "https://xpecoz.github.io/Tips-And-Tricks/")
+          +project-img-card("Project 4.webp", "SmartJS", [], "https://smartjs.netlify.app/")
+          +project-img-card("Project 7.webp", "Edit Image", [], "https://xpecoz.github.io/Edit-The-Image/")
+          +project-img-card("Project 6.webp", "Elzero Project", [], "https://xpecoz.github.io/Template-3/")
+          +project-img-card("Project 2.webp", "Teacher", ["PHP","My", "SQL"], "https://xpecoz.github.io/Math_Jewel/")
+          +project-img-card("Project 8.webp", "Kasper", [], "https://xpecoz.github.io/Template-2/")
+          +project-img-card("Project 9.webp", "Eazy Game", [], "https://xpecoz.github.io/Frist_Game/")
+          +project-img-card("Project 10.webp", "Leon", [], "https://xpecoz.github.io/Template-1/")
+          +project-img-card("Project 5.webp", "Drag And Drop", [], "https://xpecoz.github.io/Drag_And_Drop/")
+          +project-img-card("Project 11.webp", "Writing Speed", [], "https://xpecoz.github.io/Writing-Speed/")
+          +project-img-card("Project 12.webp", "ToDo List", [], "https://xpecoz.github.io/ToDo-List/")
+
+      +main-title("Contact")
+      section.contact
+        .container.m-auto.d-grid.p-4.mb-3
+          form.contact_form.d-flex.flex-column.m-auto.rounded-2.text-white
+            h4 Your Massage
+            input.border-0.fs-6.text-white.rounded-2#fullName(type="text" placeholder="Your Name" required)
+            input.border-0.fs-6.text-white.rounded-2#email_id(type="email" placeholder="Your Email" required)
+            input.border-0.fs-6.text-white.rounded-2#phone_id(type="text" placeholder="Your Phone" required)
+            textarea.border-0.fs-6.text-white.rounded-2#message(placeholder="What Do You Want ?" required)
+            button.send.btn.m-auto.text-white.fw-bold.mt-4(type="submit") Send
+      footer
+        .container.m-auto.d-grid
+          p.m-0.text-white.fs-4.fw-bold.text-center.lh-lg Created By 
+            a.text-decoration-none.fw-bold(href="mailto:abdulrahmansalam376@gmail.com" target="_blank") abdulrahmansalam376
+            | , Phone : 
+            a.text-decoration-none.fw-bold(href="https://api.whatsapp.com/send?phone=201024289101&text=Hello,%20How%20Are%20You?" target="_blank") +20 1024289101
+      a.text-decoration-none.up.position-fixed.rounded-2.text-white.fs-4.d-flex.align-items-center(href="#") Up
+    .openVideo.position-fixed.top-50.start-50.d-flex.flex-column.justify-content-center.align-items-center.gap-4.w-100.h-100
+      i#closeVideo.fa-solid.fa-x.fs-2.text-white.text-center.rounded-circle
+      video#video(src="videos/School.mp4" muted loop autoplay controls).rounded-4.border-0
+      script(src="Js/main.js")
+      script(src="https://kit.fontawesome.com/102e410967.js" ,crossorigin="anonymous")
+      //- <script type="text/javascript">
+      //- | (function () {
+      //- |   emailjs.init("15PMwBSR0r-57Qq33")
+      //- | })
+      //- </script>
+      script(src="https://cdn.lordicon.com/ritcuqlt.js")
+      //- script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js")
