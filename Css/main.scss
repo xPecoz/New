@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap");
-
 $main1-box-color: #1d1933;
 $main-color: #f28600;
 $body-color: #121128;
@@ -98,7 +97,6 @@ body {
 /* Start Header */
 header {
   background-color: $main1-box-color;
-  border-radius: 0 0 8px 8px;
   .container .main-links {
     font-size: 25px;
     a {
@@ -160,13 +158,10 @@ header {
   }
 }
 .header {
-  border-radius: 0 0 8px 8px;
   transform: translateY(500px);
   background-color: $main1-box-color;
   transition: 0.5s;
-  border-radius: 15px 15px 0 0;
   .container .links {
-    flex-wrap: wrap;
     font-size: 25px;
     gap: 30px;
     div a {
@@ -455,11 +450,8 @@ $i: 1;
       letter-spacing: 1.5px;
       margin: 60px 0;
     }
-    .images {
-      flex-wrap: wrap;
-      img {
-        height: 170px;
-      }
+    .images img {
+      height: 170px;
     }
   }
 }
@@ -467,41 +459,23 @@ $i: 1;
 /* Start Project */
 .project {
   min-height: 80vh;
-  // background: linear-gradient(
-  //   272deg,
-  //   transparent,
-  //   $main1-box-color,
-  //   transparent
-  // );
   .container {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
     .card {
       background-color: $main1-box-color;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 10px;
-      padding: 15px;
       transition: 0.3s;
       &:hover {
         border: 1px solid $main-hover-color;
       }
       .title {
-        color: white;
-        margin: 0;
         font-size: 24px;
-        font-weight: bold;
-      }
-      .image {
-        display: flex;
-        justify-content: center;
       }
       .image img,
       .image video {
         transition: 0.5s;
         width: 90%;
-        border-radius: 8px;
       }
       &:hover .image img,
       &:hover .image video {
@@ -525,23 +499,14 @@ $i: 1;
           P {
             margin: 10px 0;
           }
-          .html {
-            color: #f16529;
-          }
-          .css {
-            color: #2965f1;
-          }
-          .js {
-            color: #f7e018;
-          }
-          .php {
-            color: #7175aa;
-          }
-          .my {
-            color: #00618a;
-          }
-          .sql {
-            color: #e48e00;
+
+          $color: html #f16529, css #2965f1, js #f7e018, php #7175aa, my #00618a,
+            sql #e48e00;
+
+          @each $name, $color in $color {
+            .#{$name} {
+              color: $color;
+            }
           }
           .showVideo,
           .view-web {
@@ -549,7 +514,6 @@ $i: 1;
             --c: #f28600;
 
             color: #0000;
-            padding: 0;
             padding-bottom: var(--s);
             background: linear-gradient(90deg, var(--c) 50%, white 0)
                 calc(100% - var(--_p, 0%)) / 200% 100%,
@@ -557,7 +521,6 @@ $i: 1;
                 no-repeat;
             -webkit-background-clip: text, padding-box;
             background-clip: text, padding-box;
-            border: none;
 
             transition: 0.5s;
             &:hover {
@@ -593,7 +556,6 @@ $i: 1;
     }
     input,
     textarea {
-      outline: none;
       margin: 10px 0;
       padding: 20px;
       resize: none;
@@ -690,9 +652,6 @@ footer {
     background-color: $main-hover-color;
     width: 50px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 5px;
     box-sizing: content-box;
   }

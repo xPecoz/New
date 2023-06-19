@@ -63,8 +63,7 @@ body {
   transform: scaleY(0);
 }
 
-.button__horizontal,
-.button__vertical {
+.button__horizontal, .button__vertical {
   top: var(--horizontal-offset, 0);
   right: var(--vertical-offset, 0);
   bottom: var(--horizontal-offset, 0);
@@ -72,8 +71,7 @@ body {
   transition: transform 0.8s ease;
   will-change: transform;
 }
-.button__horizontal::before,
-.button__vertical::before {
+.button__horizontal::before, .button__vertical::before {
   content: "";
   position: absolute;
   border: inherit;
@@ -104,7 +102,6 @@ body {
 /* Start Header */
 header {
   background-color: #1d1933;
-  border-radius: 0 0 8px 8px;
 }
 header .container .main-links {
   font-size: 25px;
@@ -114,15 +111,12 @@ header .container .main-links a {
   --s: 0.1em;
   color: rgba(0, 0, 0, 0);
   padding-bottom: var(--s);
-  background: linear-gradient(90deg, #f28600 50%, white 0)
-      calc(100% - var(--_p, 0%)) / 200% 100%,
-    linear-gradient(#f28600 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  background: linear-gradient(90deg, #f28600 50%, white 0) calc(100% - var(--_p, 0%))/200% 100%, linear-gradient(#f28600 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.5s;
 }
-header .container .main-links a:hover,
-header .container .main-links a.active {
+header .container .main-links a:hover, header .container .main-links a.active {
   --_p: 100%;
 }
 @media (max-width: 823px) {
@@ -162,14 +156,11 @@ header .container .main-links a.active {
   }
 }
 .header {
-  border-radius: 0 0 8px 8px;
   transform: translateY(500px);
   background-color: #1d1933;
   transition: 0.5s;
-  border-radius: 15px 15px 0 0;
 }
 .header .container .links {
-  flex-wrap: wrap;
   font-size: 25px;
   gap: 30px;
 }
@@ -178,9 +169,7 @@ header .container .main-links a.active {
   --c: #f28600;
   color: rgba(0, 0, 0, 0);
   padding-bottom: var(--s);
-  background: linear-gradient(90deg, var(--c) 50%, white 0)
-      calc(100% - var(--_p, 0%)) / 200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  background: linear-gradient(90deg, var(--c) 50%, white 0) calc(100% - var(--_p, 0%))/200% 100%, linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.5s;
@@ -289,8 +278,7 @@ header .container .main-links a.active {
   width: fit-content;
   outline: none !important;
 }
-.download::before,
-.download::after {
+.download::before, .download::after {
   content: "";
   display: block;
   position: absolute;
@@ -308,8 +296,7 @@ header .container .main-links a.active {
   bottom: 0;
   border-top-width: 0;
 }
-.download:active::before,
-.download:active::after {
+.download:active::before, .download:active::after {
   right: 3px;
   left: 3px;
 }
@@ -324,8 +311,7 @@ header .container .main-links a.active {
   background-color: #2a2544;
   box-shadow: inset 0px 0px 0px 1px transparent;
 }
-.download .button_lg::before,
-.download .button_lg::after {
+.download .button_lg::before, .download .button_lg::after {
   content: "";
   position: absolute;
   background-color: #2a2544;
@@ -472,9 +458,6 @@ header .container .main-links a.active {
   letter-spacing: 1.5px;
   margin: 60px 0;
 }
-.skills .container .tools .images {
-  flex-wrap: wrap;
-}
 .skills .container .tools .images img {
   height: 170px;
 }
@@ -490,34 +473,21 @@ header .container .main-links a.active {
 }
 .project .container .card {
   background-color: #1d1933;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
-  padding: 15px;
   transition: 0.3s;
 }
 .project .container .card:hover {
   border: 1px solid #7505f0;
 }
 .project .container .card .title {
-  color: white;
-  margin: 0;
   font-size: 24px;
-  font-weight: bold;
-}
-.project .container .card .image {
-  display: flex;
-  justify-content: center;
 }
 .project .container .card .image img,
 .project .container .card .image video {
   transition: 0.5s;
   width: 90%;
-  border-radius: 8px;
 }
-.project .container .card:hover .image img,
-.project .container .card:hover .image video {
+.project .container .card:hover .image img, .project .container .card:hover .image video {
   opacity: 0.5;
   transform: translateX(30%);
 }
@@ -563,14 +533,10 @@ header .container .main-links a.active {
   --s: 0.1em;
   --c: #f28600;
   color: rgba(0, 0, 0, 0);
-  padding: 0;
   padding-bottom: var(--s);
-  background: linear-gradient(90deg, var(--c) 50%, white 0)
-      calc(100% - var(--_p, 0%)) / 200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  background: linear-gradient(90deg, var(--c) 50%, white 0) calc(100% - var(--_p, 0%))/200% 100%, linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
-  border: none;
   transition: 0.5s;
 }
 .project .container .card .details .center .showVideo:hover,
@@ -604,15 +570,13 @@ header .container .main-links a.active {
 }
 .contact .container form input,
 .contact .container form textarea {
-  outline: none;
   margin: 10px 0;
   padding: 20px;
   resize: none;
   background-color: rgba(79, 0, 228, 0.8);
   outline: none !important;
 }
-.contact .container form input::-moz-placeholder,
-.contact .container form textarea::-moz-placeholder {
+.contact .container form input::-moz-placeholder, .contact .container form textarea::-moz-placeholder {
   color: white;
 }
 .contact .container form input::placeholder,
@@ -708,9 +672,6 @@ footer .container a {
   background-color: #7505f0;
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 5px;
   box-sizing: content-box;
 }
@@ -729,4 +690,4 @@ footer .container a {
 
 .blur {
   filter: blur(50px);
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
