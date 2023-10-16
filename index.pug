@@ -5,14 +5,12 @@ html(lang="en").lh-sm
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="This Is My Profile I Called Peco In This Web You Can Show Informations About Me")
     title Abdulrahman Salam
     link(rel="stylesheet", href="Css/bootstrap.min.css")
     link(rel="stylesheet", href="Css/main.css")
-    link(rel="preconnect", href="https://fonts.googleapis.com")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
-    link(rel="shortcut icon", href="Images/logo.webp")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&amp;display=swap")
     link(rel="stylesheet", href="https://unicons.iconscout.com/release/v4.0.0/css/line.css")
+    link(rel="shortcut icon", href="Images/logo.webp")
   body.m-0
     main
       include ./includes/header
@@ -24,7 +22,7 @@ html(lang="en").lh-sm
             h1.fw-bold.lh-base Hi There,
             h1.fw-bold.lh-base Iam Abdulrahman Salam
             h1.h1-home.overflow-hidden.text-nowrap.text-start.fw-bold.lh-base Full Stack Developer
-          img(src="Images/home.webp", alt="Error")
+          img(src="Images/home.webp", alt="Error").w-auto
       +main-title("About") 
       section.about
         .container.m-auto.d-grid.align-items-center
@@ -38,13 +36,17 @@ html(lang="en").lh-sm
               |  And My Project 
               a(href="#project") Click This
           .icons.d-flex.justify-content-between.w-50
-            a.text-decoration-none(href="https://web.facebook.com/xPecoz/", target="_blank")
+            a.text-decoration-none(title="Per" href="https://web.facebook.com/xPecoz/", target="_blank")
+              
               i(class="fa-brands fa-facebook" style="color: #1877f2")
-            a.text-decoration-none(href="https://www.instagram.com/abdulrahmanbkd/", target="_blank")
+            a.text-decoration-none(title="Per" href="https://www.instagram.com/xpecoz//", target="_blank")
+              
               i(class="fa-brands fa-instagram" style="color: #e1306c")
-            a.text-decoration-none(href="https://api.whatsapp.com/send?phone=201024289101&text=Hello,%20How%20Are%20You?", target="_blank")
+            a.text-decoration-none(title="Per" href="https://api.whatsapp.com/send?phone=201024289101&text=Hello,%20How%20Are%20You?", target="_blank")
+              
               i(class="fa-brands fa-whatsapp" style="color: #25d366")
-            a.text-decoration-none(href="https://github.com/xPecoz", target="_blank")
+            a.text-decoration-none(title="Per" href="https://github.com/xPecoz", target="_blank")
+              
               i(class="fa-brands fa-github" style="color: #979191")
           button.d-block.download.position-relative.fw-bold.text-uppercase.border-0.m-auto.bg-transparent.p-2.mb-4
             span.button_lg.d-block.position-relative.text-white.overflow-hidden
@@ -96,7 +98,7 @@ html(lang="en").lh-sm
               i(class="fa-brands fa-css3-alt")
             .box(number="85").overflow-hidden.text-white.d-grid.position-relative.rounded-3
               i(class="fa-brands fa-square-js")
-            .box(number="10").overflow-hidden.text-white.d-grid.position-relative.rounded-3
+            .box(number="80").overflow-hidden.text-white.d-grid.position-relative.rounded-3
               i(class="fa-brands fa-react")
             .box(number="85").overflow-hidden.text-white.d-grid.position-relative.rounded-3
               i(class="fa-brands fa-php")
@@ -117,10 +119,10 @@ html(lang="en").lh-sm
           .tools
             h2.text-center.fs-1.fw-bold Tools
             .images.d-flex.justify-content-between.gap-5.flex-wrap
-              img(src="Images/vs-code.webp", alt="Error").m-auto
-              img(src="Images/windows10.webp", alt="Error").m-auto
-              img(src="Images/Xampp.webp", alt="Error").m-auto
-              img(src="Images/git&github.webp", alt="Error").m-auto
+              img(src="Images/vs-code.webp", alt="Error").m-auto.w-auto
+              img(src="Images/windows10.webp", alt="Error").m-auto.w-auto
+              img(src="Images/Xampp.webp", alt="Error").m-auto.w-auto
+              img(src="Images/git&github.webp", alt="Error").m-auto.w-auto
       +main-title("Project")
       section.project
         .container.m-auto.position-relative.d-grid.gap-4
@@ -129,7 +131,7 @@ html(lang="en").lh-sm
           +project-img-card("Project 4.webp", "SmartJS", [], "https://smartjs.netlify.app/")
           +project-img-card("Project 7.webp", "Edit Image", [], "https://xpecoz.github.io/Edit-The-Image/")
           +project-img-card("Project 6.webp", "Elzero Project", [], "https://xpecoz.github.io/Template-3/")
-          +project-img-card("Project 2.webp", "Teacher", ["PHP","My", "SQL"], "https://xpecoz.github.io/Math_Jewel/")
+          +project-img-card("Project 2.webp", "Teacher", ["PHP","My", "SQL"], "https://mathjewel.com")
           +project-img-card("Project 8.webp", "Kasper", [], "https://xpecoz.github.io/Template-2/")
           +project-img-card("Project 9.webp", "Eazy Game", [], "https://xpecoz.github.io/Frist_Game/")
           +project-img-card("Project 10.webp", "Leon", [], "https://xpecoz.github.io/Template-1/")
@@ -141,7 +143,7 @@ html(lang="en").lh-sm
       section.contact
         .container.m-auto.d-grid.p-4.mb-3
           form.contact_form.d-flex.flex-column.m-auto.rounded-2.text-white
-            h4 Your Massage
+            p.fs-4 Your Massage
             input.border-0.fs-6.text-white.rounded-2#fullName(type="text" placeholder="Your Name" required)
             input.border-0.fs-6.text-white.rounded-2#email_id(type="email" placeholder="Your Email" required)
             input.border-0.fs-6.text-white.rounded-2#phone_id(type="text" placeholder="Your Phone" required)

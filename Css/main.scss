@@ -383,7 +383,7 @@ header {
 }
 /* End Services */
 /* Start Skills */
-$arr: 90%, 90%, 85%, 10%, 85%, 80%, 10%, 75%, 80%, 75%, 10%, 10%;
+$arr: 90%, 90%, 85%, 80%, 85%, 80%, 10%, 75%, 80%, 75%, 10%, 10%;
 $i: 1;
 
 .skills .container {
@@ -550,9 +550,8 @@ $i: 1;
     padding: 2vw 4vw;
     width: 90%;
     max-width: 600px;
-    h4 {
+    p {
       font-weight: 800;
-      margin-bottom: 20px;
     }
     input,
     textarea {
