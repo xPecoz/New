@@ -501,7 +501,7 @@ $i: 1;
           }
 
           $color: html #f16529, css #2965f1, js #f7e018, php #7175aa, my #00618a,
-            sql #e48e00;
+            sql #e48e00, reactjs #5ed3f3, tailwind #38bdf8, scss #c76494;
 
           @each $name, $color in $color {
             .#{$name} {

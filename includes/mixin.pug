@@ -5,10 +5,10 @@ mixin main-title (title)
     .button__vertical.position-absolute
 
 mixin project-img-card (src, title, skills, link)
-  .card.position-relative.rounded-3.overflow-hidden
-    p.title #{title}
-    .image.h-100.overflow-hidden
-      img(src="Images/" + src, autoplay muted, alt="Error")
+  .card.position-relative.rounded-3.overflow-hidden.d-flex.align-items-center.justify-content-center.p-3
+    p.title.text-white.fw-bold.m-0 #{title}
+    .image.h-100.overflow-hidden.d-flex.justify-content-center
+      img(src="Images/" + src, autoplay muted, alt="Error").rounded-3.h-auto
     .details.position-absolute.h-100.top-0.start-0.h-100.w-75
       .center.translate-middle-y.text-center.position-absolute.top-50
         h1.m-0.p-0.text-uppercase.text-white.fw-bold #{title}
@@ -25,13 +25,13 @@ mixin project-img-card (src, title, skills, link)
             -else
               span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
               | , 
-        a(href=link, target="_blank").view-web.fw-bold View Website
+        a(href=link, target="_blank").view-web.fw-bold.p-0.border-0 View Website
 
 mixin project-video-card (src, title, skills)
-  .card.position-relative.rounded-3.overflow-hidden
-    p.title #{title}
-    .image.h-100.overflow-hidden
-      video(src="videos/" + src, autoplay muted loop, alt="Scool")
+  .card.position-relative.rounded-3.overflow-hidden.d-flex.align-items-center.justify-content-center.p-3
+    p.title.text-white.fw-bold.m-0 #{title}
+    .image.h-100.overflow-hidden.d-flex.justify-content-center
+      video(src="videos/" + src, autoplay muted loop, alt="Scool").rounded-3
     .details.position-absolute.h-100.top-0.start-0.h-100
       .center.translate-middle-y.text-center.position-absolute.top-50
         h1.m-0.p-0.text-uppercase.text-white.fw-bold #{title}
@@ -48,4 +48,4 @@ mixin project-video-card (src, title, skills)
             -else
               span(class=skills[i].toLowerCase()).fw-bold #{skills[i]}
               | , 
-        button.showVideo.m-0.fw-bold(data-src="videos/" + src) Full Screen
+        button.showVideo.p-0.m-0.fw-bold.border-0(data-src="videos/" + src) Full Screen

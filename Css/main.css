@@ -528,6 +528,15 @@ header .container .main-links a:hover, header .container .main-links a.active {
 .project .container .card .details .center .sql {
   color: #e48e00;
 }
+.project .container .card .details .center .reactjs {
+  color: #5ed3f3;
+}
+.project .container .card .details .center .tailwind {
+  color: #38bdf8;
+}
+.project .container .card .details .center .scss {
+  color: #c76494;
+}
 .project .container .card .details .center .showVideo,
 .project .container .card .details .center .view-web {
   --s: 0.1em;
