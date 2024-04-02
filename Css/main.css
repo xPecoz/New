@@ -396,7 +396,7 @@ header .container .main-links a:hover, header .container .main-links a.active {
   transition: 0.5s;
 }
 .skills .container .info .box::after {
-  content: attr(number) "%";
+  content: "";
   position: absolute;
   color: white;
   top: 100%;
@@ -405,42 +405,6 @@ header .container .main-links a:hover, header .container .main-links a.active {
   transform: translateX(-40%);
   transition: 0.5s;
 }
-.skills .container .info .box:nth-child(1):hover::before {
-  height: calc(90% + 20px);
-}
-.skills .container .info .box:nth-child(2):hover::before {
-  height: calc(90% + 20px);
-}
-.skills .container .info .box:nth-child(3):hover::before {
-  height: calc(85% + 20px);
-}
-.skills .container .info .box:nth-child(4):hover::before {
-  height: calc(80% + 20px);
-}
-.skills .container .info .box:nth-child(5):hover::before {
-  height: calc(85% + 20px);
-}
-.skills .container .info .box:nth-child(6):hover::before {
-  height: calc(80% + 20px);
-}
-.skills .container .info .box:nth-child(7):hover::before {
-  height: calc(10% + 20px);
-}
-.skills .container .info .box:nth-child(8):hover::before {
-  height: calc(75% + 20px);
-}
-.skills .container .info .box:nth-child(9):hover::before {
-  height: calc(80% + 20px);
-}
-.skills .container .info .box:nth-child(10):hover::before {
-  height: calc(75% + 20px);
-}
-.skills .container .info .box:nth-child(11):hover::before {
-  height: calc(10% + 20px);
-}
-.skills .container .info .box:nth-child(12):hover::before {
-  height: calc(10% + 20px);
-}
 .skills .container .info .box:hover {
   box-shadow: 0px 0px 30px 0px #7505f0;
   transform: scale(1.05);
@@ -448,6 +412,9 @@ header .container .main-links a:hover, header .container .main-links a.active {
 }
 .skills .container .info .box:hover::after {
   top: 10px;
+}
+.skills .container .info .box:hover::before {
+  height: 100%;
 }
 .skills .container .info .box img {
   height: 100px;
